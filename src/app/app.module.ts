@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ViewModule } from './view/view.module';
+import { MochaService } from './mocha.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ViewModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MochaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
